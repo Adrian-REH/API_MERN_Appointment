@@ -49,4 +49,4 @@ content-Type: application/json
     "price":"500*0.2"
 }
 ###
-DELETE    https://ibiocdappointment.azurewebsites.net/api/appointment/639e743479231047a438af56 HTTP/1.1
+DELETE    https://ibiocdappointment.azurewebsites.net/api/appointment/639e77b184881c462ad6a0b6 HTTP/1.1

@@ -1,0 +1,37 @@
+//CREATE UNIQUE
+###
+POST http://localhost:9000/api/specialty HTTP/1.1
+content-Type: application/json
+
+{
+    "title":"Blanqueo",
+    "comment":"La verdad nose que poner",
+    "professional":"639e5b3678539b79cd8dfbe1",
+    "offer":"tuktuyytyertgfd",
+    "price":"500"
+}
+
+//ALL GET
+###
+GET http://localhost:9000/api/specialty HTTP/1.1
+
+//GET UNIQUE 
+###
+GET http://localhost:9000/api/specialty/639e743b79231047a438af58 HTTP/1.1
+
+
+//UPDATE UNIQUE ID
+###
+PUT  http://localhost:9000/api/specialty/639e743b79231047a438af58 HTTP/1.1
+content-Type: application/json
+
+{
+    "title":"Blanqueo",
+    "comment":"Ver las ofertas al sacar el turno",
+    "professional":"639e5b3678539b79cd8dfbe1",
+    "offer":"639e7564c0df17739ae36210",
+    "price":"500"
+}
+
+###
+DELETE   http://localhost:9000/api/specialty/639e60de17cf92e9199e3f74 HTTP/1.1

@@ -1,0 +1,37 @@
+odontogram//CREATE UNIQUE
+###
+POST http://localhost:9000/api/odontogram HTTP/1.1
+content-Type: application/json
+
+{
+    "data":"asd",
+    "client":"svv",
+    "professional":"ccvdfs"
+}
+
+//ALL GET
+###
+GET http://localhost:9000/api/odontogram HTTP/1.1
+
+//UNIQUE GET
+###
+GET http://localhost:9000/api/odontogram/639e6b1ac26ea5675c1ae284 HTTP/1.1
+
+###
+GET http://localhost:9000/api/odontogram/professional/ccvdfs HTTP/1.1
+
+###
+GET http://localhost:9000/api/odontogram/client/svv HTTP/1.1
+
+//UPDATE UNIQUE ID
+###
+PUT  http://localhost:9000/api/odontogram/639e6b1ac26ea5675c1ae284 HTTP/1.1
+content-Type: application/json
+
+{
+    "data":"05032023",
+    "client":"svv",
+    "professional":"ccvdfs"
+}
+###
+DELETE   http://localhost:9000/api/odontogram/639e649e4be659baa2a6006b HTTP/1.1

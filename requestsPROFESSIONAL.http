@@ -1,0 +1,37 @@
+###
+POST http://localhost:9000/api/professional HTTP/1.1
+content-Type: application/json
+
+{
+    
+    "name_last":"Elias Herrera",
+    "dni":"99412342",
+    "phone":"3813910940",
+    "email":"eliasherrera.r.e@gmail.com",
+    "direction":"Pj d 207",
+    "tuition":"62222"
+}
+
+###
+GET http://localhost:9000/api/professional HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/professional/639e3893df7bafb06a27e5fd HTTP/1.1
+
+
+
+###
+PUT  http://localhost:9000/api/professional/639e3893df7bafb06a27e5fd HTTP/1.1
+content-Type: application/json
+
+{
+    "name_last":"Elias Herrera",
+    "dni":"99412342",
+    "phone":"3813910940",
+    "email":"eliasherrera.r@gmail.com",
+    "direction":"Pj d207",
+    "tuition":"8824"
+}
+###
+DELETE   http://localhost:9000/api/professional/639e46e1d3742d4db3355eb0 HTTP/1.1

@@ -1,0 +1,35 @@
+###
+POST http://localhost:9000/api/client HTTP/1.1
+content-Type: application/json
+
+{
+    
+    "name_last":"Elias Herrera",
+    "dni":"99412342",
+    "phone":"3813910940",
+    "email":"eliasherrera.r.e@gmail.com",
+    "direction":"Pj d 207"
+}
+
+###
+GET http://localhost:9000/api/client HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/client/639e5b3678539b79cd8dfbe1 HTTP/1.1
+
+
+
+###
+PUT  http://localhost:9000/api/client/639e5b3678539b79cd8dfbe1 HTTP/1.1
+content-Type: application/json
+
+{
+    "name_last":"Guemez Dante",
+    "dni":"1133548822",
+    "phone":"554221843",
+    "email":"guemezdante@gmail.com",
+    "direction":"Donde estr 203"
+}
+###
+DELETE   http://localhost:9000/api/client/639e46e1d3742d4db3355eb0 HTTP/1.1

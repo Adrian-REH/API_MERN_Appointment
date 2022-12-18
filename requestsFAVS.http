@@ -1,0 +1,37 @@
+//CREATE UNIQUE
+###
+POST http://localhost:9000/api/favs HTTP/1.1
+content-Type: application/json
+
+{
+    "professional":"639e34145bb5sadceeaa8a6a",
+    "client":"639e5b3678539b79cd8dfbe1"
+
+}
+
+//ALL GET
+###
+GET http://localhost:9000/api/favs HTTP/1.1
+
+//GET UNIQUE 
+###
+GET http://localhost:9000/api/favs/639e5ff3a33b05f5d78455f0 HTTP/1.1
+
+###
+GET http://localhost:9000/api/favs/professional/639e34145bb5f9cceeaa8a6a HTTP/1.1
+
+###
+GET http://localhost:9000/api/favs/client/639e5b3678539b79cd8dfbe1 HTTP/1.1
+
+//UPDATE UNIQUE ID
+###
+PUT  http://localhost:9000/api/favs/639e60de17cf92e9199e3f74 HTTP/1.1
+content-Type: application/json
+
+{
+    "professional":"f",
+    "client":"dsv"
+}
+
+###
+DELETE   http://localhost:9000/api/favs/639e60de17cf92e9199e3f74 HTTP/1.1

@@ -1,0 +1,43 @@
+//CREATE UNIQUE
+###
+POST http://localhost:9000/api/files HTTP/1.1
+content-Type: application/json
+
+{
+    "laboratory":"https://",
+    "prescriptions":"https://",
+    "stadies":"https://",
+    "odontogram":"ggewrasdsad24fdfasd",
+    "client":"ggewr234324fdfasd",
+    "professional":"nfgidfadfcdudvdasf"
+}
+
+//ALL GET
+###
+GET http://localhost:9000/api/files HTTP/1.1
+
+//GET UNIQUE ID
+###
+GET http://localhost:9000/api/files/639e5e8949faa98335149024 HTTP/1.1
+
+###
+GET http://localhost:9000/api/files/professional/nfgidfadfcdudvdasf HTTP/1.1
+
+###
+GET http://localhost:9000/api/files/client/ggewr234324fdfasd HTTP/1.1
+
+//UPDATE UNIQUE ID
+###
+PUT  http://localhost:9000/api/files/639e5e8949faa98335149024 HTTP/1.1
+content-Type: application/json
+
+{
+    "laboratory":"http://",
+    "prescriptions":"http://",
+    "stadies":"http://",
+    "odontogram":"ggewrasdsad24fdfasd",
+    "client":"ggewr234324fdfasd",
+    "professional":"nfgidfadfcdudvdasf"
+}
+###
+DELETE   http://localhost:9000/api/files/639e4fea47baef21c5416c9d HTTP/1.1

@@ -2,10 +2,10 @@
 const mongoose = require("mongoose");
 
 const favsSchema= mongoose.Schema({
-    professional:{
+    medical:{
         type: String
     },
-    client:{
+    pattient:{
         type: String
     }
 },{

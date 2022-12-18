@@ -1,6 +1,6 @@
 //CREATE UNIQUE
 ###
-POST http://localhost:9000/api/files HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/files HTTP/1.1
 content-Type: application/json
 
 {
@@ -8,27 +8,27 @@ content-Type: application/json
     "prescriptions":"https://",
     "stadies":"https://",
     "odontogram":"ggewrasdsad24fdfasd",
-    "client":"ggewr234324fdfasd",
-    "professional":"nfgidfadfcdudvdasf"
+    "patient":"ggewr234324fdfasd",
+    "medical":"nfgidfadfcdudvdasf"
 }
 
 //ALL GET
 ###
-GET http://localhost:9000/api/files HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/files HTTP/1.1
 
 //GET UNIQUE ID
 ###
-GET http://localhost:9000/api/files/639e5e8949faa98335149024 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/files/639e5e8949faa98335149024 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/files/professional/nfgidfadfcdudvdasf HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/files/medical/nfgidfadfcdudvdasf HTTP/1.1
 
 ###
-GET http://localhost:9000/api/files/client/ggewr234324fdfasd HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/files/patient/ggewr234324fdfasd HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT  http://localhost:9000/api/files/639e5e8949faa98335149024 HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/files/639e5e8949faa98335149024 HTTP/1.1
 content-Type: application/json
 
 {
@@ -36,8 +36,8 @@ content-Type: application/json
     "prescriptions":"http://",
     "stadies":"http://",
     "odontogram":"ggewrasdsad24fdfasd",
-    "client":"ggewr234324fdfasd",
-    "professional":"nfgidfadfcdudvdasf"
+    "patient":"ggewr234324fdfasd",
+    "medical":"nfgidfadfcdudvdasf"
 }
 ###
-DELETE   http://localhost:9000/api/files/639e4fea47baef21c5416c9d HTTP/1.1
+DELETE    https://ibiocdappointment.azurewebsites.net/api/files/639e4fea47baef21c5416c9d HTTP/1.1

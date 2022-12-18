@@ -1,5 +1,5 @@
 ###
-POST http://localhost:9000/api/professional HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/medical HTTP/1.1
 content-Type: application/json
 
 {
@@ -13,16 +13,16 @@ content-Type: application/json
 }
 
 ###
-GET http://localhost:9000/api/professional HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/medical HTTP/1.1
 
 
 ###
-GET http://localhost:9000/api/professional/639e3893df7bafb06a27e5fd HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/medical/639e3893df7bafb06a27e5fd HTTP/1.1
 
 
 
 ###
-PUT  http://localhost:9000/api/professional/639e3893df7bafb06a27e5fd HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/medical/639e3893df7bafb06a27e5fd HTTP/1.1
 content-Type: application/json
 
 {
@@ -34,4 +34,4 @@ content-Type: application/json
     "tuition":"8824"
 }
 ###
-DELETE   http://localhost:9000/api/professional/639e46e1d3742d4db3355eb0 HTTP/1.1
+DELETE    https://ibiocdappointment.azurewebsites.net/api/medical/639e46e1d3742d4db3355eb0 HTTP/1.1

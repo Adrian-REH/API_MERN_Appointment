@@ -5,10 +5,10 @@ const formsSchema= mongoose.Schema({
     data:{
         type: String,
     },
-    professional:{
+    medical:{
         type: String,
     },
-    client:{
+    patient:{
         type: String
     }
 },{

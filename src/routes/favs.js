@@ -28,28 +28,28 @@ router.get("/favs/:id", (req, res) => {
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET PROFESSIONAL
-router.get("/favs/professional/:professional", (req, res) => {
-  const{professional} =req.params;
+//GET MEDICAL
+router.get("/favs/medical/:medical", (req, res) => {
+  const{medical} =req.params;
   favsSchema
-    .findOne({professional:professional})
+    .findOne({medical:medical})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET CLIENT
-router.get("/favs/client/:client", (req, res) => {
-  const{client} =req.params;
+//GET PATIENT
+router.get("/favs/patient/:patient", (req, res) => {
+  const{patient} =req.params;
   favsSchema
-    .findOne({client:client})
+    .findOne({patient:patient})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 //UPDATE ID
 router.put("/favs/:id", (req, res) => {
   const{id} =req.params;
-  const{professional,client}=req.body;
+  const{medical,patient}=req.body;
   favsSchema
-    .updateOne({_id:id},{$set:{professional,client}})
+    .updateOne({_id:id},{$set:{medical,patient}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

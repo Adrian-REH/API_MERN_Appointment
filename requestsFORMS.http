@@ -1,37 +1,37 @@
 //CREATE UNIQUE
 ###
-POST http://localhost:9000/api/forms HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/forms HTTP/1.1
 content-Type: application/json
 
 {
     "data":"",
-    "client":"svv",
-    "professional":"ccvdfs"
+    "patient":"svv",
+    "medical":"ccvdfs"
 }
 
 //ALL GET
 ###
-GET http://localhost:9000/api/forms HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/forms HTTP/1.1
 
 //UNIQUE GET
 ###
-GET http://localhost:9000/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/forms/professional/ccvdfs HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/forms/medical/ccvdfs HTTP/1.1
 
 ###
-GET http://localhost:9000/api/forms/client/svv HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/forms/patient/svv HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT  http://localhost:9000/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
 content-Type: application/json
 
 {
     "data":"05032023",
-    "client":"dddd",
-    "professional":"nfgidfadfcdudvdasf"
+    "patient":"dddd",
+    "medical":"nfgidfadfcdudvdasf"
 }
 ###
-DELETE   http://localhost:9000/api/forms/639e6299c7634dfd7561b825 HTTP/1.1
+DELETE   https://ibiocdappointment.azurewebsites.net/api/forms/639e6299c7634dfd7561b825 HTTP/1.1

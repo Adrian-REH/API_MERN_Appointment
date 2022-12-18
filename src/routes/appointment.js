@@ -55,9 +55,9 @@ router.get("/appointment/files/:files", (req, res) => {
 //UPDATE ID
 router.put("/appointment/:id", (req, res) => {
   const{id} =req.params;
-  const{fecha,hora,coment,specialty,client,professional,files,price}=req.body;
+  const{fecha,hora,coment,specialty,patient,medical,profession,files,price}=req.body;
   appointmentSchema
-    .updateOne({_id:id},{$set:{fecha,hora,coment,specialty,client,professional,files,price}})
+    .updateOne({_id:id},{$set:{fecha,hora,coment,specialty,patient,medical,profession,files,price}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

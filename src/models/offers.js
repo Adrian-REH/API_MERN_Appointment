@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 const offersSchema= mongoose.Schema({
-    professional:{
+    medical:{
         type: String,
     },
     code:{

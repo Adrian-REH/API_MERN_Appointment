@@ -1,5 +1,5 @@
 ###
-POST http://localhost:9000/api/client HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/patient HTTP/1.1
 content-Type: application/json
 
 {
@@ -12,16 +12,16 @@ content-Type: application/json
 }
 
 ###
-GET http://localhost:9000/api/client HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/patient HTTP/1.1
 
 
 ###
-GET http://localhost:9000/api/client/639e5b3678539b79cd8dfbe1 HTTP/1.1
+GET https://ibiocdappointment.azurewebsites.net/api/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
 
 
 
 ###
-PUT  http://localhost:9000/api/client/639e5b3678539b79cd8dfbe1 HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
 content-Type: application/json
 
 {
@@ -32,4 +32,4 @@ content-Type: application/json
     "direction":"Donde estr 203"
 }
 ###
-DELETE   http://localhost:9000/api/client/639e46e1d3742d4db3355eb0 HTTP/1.1
+DELETE   https://ibiocdappointment.azurewebsites.net/api/patient/639e46e1d3742d4db3355eb0 HTTP/1.1

@@ -1,55 +1,47 @@
 const express = require('express');
-const profesionSchema= require("../models/professional");
+const clientSchema= require("../models/patient");
 const router=express.Router();
 
-
-
-//READ
-//UPDATE
-//DELETE
-
-
-
 //CREATE
-router.post("/professional", (req, res) => {
-    const professional = profesionSchema(req.body);
-    professional
+router.post("/client", (req, res) => {
+    const client = clientSchema(req.body);
+    client
       .save()
       .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL
-router.get("/professional", (req, res) => {
+router.get("/client", (req, res) => {
   
-  profesionSchema
+  clientSchema
     .find()
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
 //GET ID
-router.get("/professional/:id", (req, res) => {
+router.get("/client/:id", (req, res) => {
   const{id} =req.params;
-  profesionSchema
+  clientSchema
     .findById(id)
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
 //UPDATE ID
-router.put("/professional/:id", (req, res) => {
+router.put("/client/:id", (req, res) => {
   const{id} =req.params;
-  const{name_last,dni,phone,email,direction,tuition}=req.body;
-  profesionSchema
-    .updateOne({_id:id},{$set:{name_last,dni,email,direction,tuition}})
+  const{name_last,dni,phone,email,direction}=req.body;
+  clientSchema
+    .updateOne({_id:id},{$set:{name_last,dni,email,direction}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
 //DELETE ID
-router.delete("/professional/:id", (req, res) => {
+router.delete("/client/:id", (req, res) => {
   const{id} =req.params;
-  profesionSchema
+  clientSchema
     .deleteOne({_id:id})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));

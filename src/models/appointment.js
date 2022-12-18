@@ -16,11 +16,15 @@ const appointmentSchema= mongoose.Schema({
     specialty:{
         type: String
     },
-    client:{
+    patient:{
         type: String,
 
     },
-    professional:{
+    medical:{
+        type: String,
+
+    },
+    profession:{
         type: String,
 
     },

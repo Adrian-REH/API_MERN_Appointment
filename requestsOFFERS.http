@@ -1,10 +1,10 @@
 //CREATE UNIQUE
 ###
-POST http://localhost:9000/api/offers HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/offers HTTP/1.1
 content-Type: application/json
 
 {
-    "professional":"639e34145bb5sadceeaa8a6a",
+    "medical":"639e34145bb5sadceeaa8a6a",
     "code":"5454FDFF",
     "fecha":"20032023",
     "percentage":"0.3",
@@ -14,23 +14,23 @@ content-Type: application/json
 
 //ALL GET
 ###
-GET http://localhost:9000/api/offers HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/offers HTTP/1.1
 
 //GET UNIQUE 
 ###
-GET http://localhost:9000/api/offers/639e7564c0df17739ae36210 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/offers/639e7564c0df17739ae36210 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/offers/professional/639e34145bb5f9cceeaa8a6a HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/offers/medical/639e34145bb5f9cceeaa8a6a HTTP/1.1
 
 
 //UPDATE UNIQUE ID
 ###
-PUT  http://localhost:9000/api/offers/639e7564c0df17739ae36210 HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/offers/639e7564c0df17739ae36210 HTTP/1.1
 content-Type: application/json
 
 {
-    "professional":"639e34145bb5f9cceeaa8a6a",
+    "medical":"639e34145bb5f9cceeaa8a6a",
     "code":"5454FDFF",
     "fecha":"20032023",
     "percentage":"0.2",
@@ -39,4 +39,4 @@ content-Type: application/json
 }
 
 ###
-DELETE   http://localhost:9000/api/offers/639e744c79231047a438af5c HTTP/1.1
+DELETE    https://ibiocdappointment.azurewebsites.net/api/offers/639e744c79231047a438af5c HTTP/1.1

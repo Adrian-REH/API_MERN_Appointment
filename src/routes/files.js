@@ -27,19 +27,19 @@ router.get("/files/:id", (req, res) => {
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET PROFESSIONAL
-router.get("/files/professional/:professional", (req, res) => {
-  const{professional} =req.params;
+//GET MEDICAL
+router.get("/files/medical/:medical", (req, res) => {
+  const{medical} =req.params;
   filesSchema
-    .findOne({professional:professional})
+    .findOne({medical:medical})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET CLIENT
-router.get("/files/client/:client", (req, res) => {
-  const{client} =req.params;
+//GET PATIENT
+router.get("/files/patient/:patient", (req, res) => {
+  const{patient} =req.params;
   filesSchema
-    .findOne({client:client})
+    .findOne({patient:patient})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
@@ -47,9 +47,9 @@ router.get("/files/client/:client", (req, res) => {
 //UPDATE ID
 router.put("/files/:id", (req, res) => {
   const{id} =req.params;
-  const{laboratory,prescriptions,stadies,odontogram,client,professional}=req.body;
+  const{laboratory,prescriptions,stadies,odontogram,patient,medical}=req.body;
   filesSchema
-    .updateOne({_id:id},{$set:{laboratory,prescriptions,stadies,odontogram,client,professional}})
+    .updateOne({_id:id},{$set:{laboratory,prescriptions,stadies,odontogram,patient,medical}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

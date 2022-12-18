@@ -27,20 +27,20 @@ router.get("/offers/:id", (req, res) => {
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET PROFESSIONAL
-router.get("/offers/professional/:professional", (req, res) => {
-  const{professional} =req.params;
+//GET MEDICAL
+router.get("/offers/medical/:medical", (req, res) => {
+  const{medical} =req.params;
   offersSchema
-    .findOne({professional:professional})
+    .findOne({medical:medical})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 //UPDATE ID
 router.put("/offers/:id", (req, res) => {
   const{id} =req.params;
-  const{professional,code,fecha,percentage,title,specialty}=req.body;
+  const{medical,code,fecha,percentage,title,specialty}=req.body;
   offersSchema
-    .updateOne({_id:id},{$set:{professional,code,fecha,percentage,title,specialty}})
+    .updateOne({_id:id},{$set:{medical,code,fecha,percentage,title,specialty}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

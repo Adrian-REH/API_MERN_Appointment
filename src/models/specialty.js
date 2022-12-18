@@ -10,7 +10,7 @@ const specialtySchema= mongoose.Schema({
         type: String,
         required: true
     },
-    professional:{
+    medical:{
         type: String
     },
     offer:{

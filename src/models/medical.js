@@ -23,6 +23,11 @@ const profesionSchema= mongoose.Schema({
         type: String,
         unique: true,
         trim: true
+    },
+    profession:{
+        type: String,
+        unique: true,
+        trim: true
     }
 },{
     timestamps:true,

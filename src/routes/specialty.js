@@ -31,9 +31,9 @@ router.get("/specialty/:id", (req, res) => {
 //UPDATE ID
 router.put("/specialty/:id", (req, res) => {
   const{id} =req.params;
-  const{title,comment,professional,offer,price}=req.body;
+  const{title,comment,medical,offer,price}=req.body;
   specialtySchema
-    .updateOne({_id:id},{$set:{title,comment,professional,offer,price}})
+    .updateOne({_id:id},{$set:{title,comment,medical,offer,price}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

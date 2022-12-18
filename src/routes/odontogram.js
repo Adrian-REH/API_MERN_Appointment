@@ -27,19 +27,19 @@ router.get("/odontogram/:id", (req, res) => {
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET PROFESSIONAL
-router.get("/odontogram/professional/:professional", (req, res) => {
-  const{professional} =req.params;
+//GET MEDICAL
+router.get("/odontogram/medical/:medical", (req, res) => {
+  const{medical} =req.params;
   odontogramSchema
-    .findOne({professional:professional})
+    .findOne({medical:medical})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET CLIENT
-router.get("/odontogram/client/:client", (req, res) => {
-  const{client} =req.params;
+//GET PATIENT
+router.get("/odontogram/patient/:patient", (req, res) => {
+  const{patient} =req.params;
   odontogramSchema
-    .findOne({client:client})
+    .findOne({patient:patient})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
@@ -47,9 +47,9 @@ router.get("/odontogram/client/:client", (req, res) => {
 //UPDATE ID
 router.put("/odontogram/:id", (req, res) => {
   const{id} =req.params;
-  const{data,client,professional}=req.body;
+  const{data,patient,medical}=req.body;
   odontogramSchema
-    .updateOne({_id:id},{$set:{data,client,professional}})
+    .updateOne({_id:id},{$set:{data,patient,medical}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

@@ -1,6 +1,6 @@
 //CREATE UNIQUE
 ###
-POST http://localhost:9000/api/appointment HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/appointment HTTP/1.1
 content-Type: application/json
 
 {
@@ -8,32 +8,33 @@ content-Type: application/json
     "hora":"1144",
     "coment":"Blanqueo",
     "specialty":"639e743b79231047a438af58",
-    "client":"639e5b3678539b79cd8dfbe1",
-    "professional":"639e34145bb5f9cceeaa8a6a",
+    "patient":"639e5b3678539b79cd8dfbe1",
+    "medical":"639e34145bb5f9cceeaa8a6a",
+    "profession":"sdsadsa",
     "files":"639e5e8949faa98335149024",
     "price":"500*0.2"
 }
 
 //ALL GET
 ###
-GET http://localhost:9000/api/appointment HTTP/1.1
+GET https://ibiocdappointment.azurewebsites.net/api/appointment HTTP/1.1
 
 //UNIQUE GET
 ###
-GET http://localhost:9000/api/appointment/639e743479231047a438af56 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/appointment/639e743479231047a438af56 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/appointment/professional/639e743479231047a438af56 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/appointment/medical/639e743479231047a438af56 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/appointment/client/639e5b3678539b79cd8dfbe1 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/appointment/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/appointment/files/639e5e8949faa98335149024 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/appointment/files/639e5e8949faa98335149024 HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT  http://localhost:9000/api/appointment/639e743479231047a438af56 HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/appointment/639e743479231047a438af56 HTTP/1.1
 content-Type: application/json
 
 {
@@ -41,10 +42,11 @@ content-Type: application/json
     "hora":"1454",
     "coment":"Blanqueo y arreglo",
     "specialty":"639e743b79231047a438af58",
-    "client":"639e5b3678539b79cd8dfbe1",
-    "professional":"639e34145bb5f9cceeaa8a6a",
+    "patient":"639e5b3678539b79cd8dfbe1",
+    "medical":"639e34145bb5f9cceeaa8a6a",
+    "profession":"asdsdc",
     "files":"639e5e8949faa98335149024",
     "price":"500*0.2"
 }
 ###
-DELETE   http://localhost:9000/api/appointment/639e743479231047a438af56 HTTP/1.1
+DELETE    https://ibiocdappointment.azurewebsites.net/api/appointment/639e743479231047a438af56 HTTP/1.1

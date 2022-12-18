@@ -2,13 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 require("dotenv").config();
 const userRoutesAPPOINTMENT=require('./src/routes/appointment')
-const userRoutesCLIENT=require('./src/routes/client')
+const userRoutesPATIENT=require('./src/routes/patient')
 const userRoutesFAVS=require('./src/routes/favs')
 const userRoutesFILE=require('./src/routes/files')
 const userRoutesFORMS=require('./src/routes/forms')
 const userRoutesODONTOGRAM=require('./src/routes/odontogram')
 const userRoutesOFFERS=require('./src/routes/offers')
-const userRoutesPROFESSIONAL=require('./src/routes/professional')
+const userRoutesMEDICAL=require('./src/routes/medical')
 const userRoutesSPECIALTY=require('./src/routes/specialty')
 
 //Settings
@@ -18,13 +18,13 @@ const port=process.env.PORT ||9000;
 // moddleware
 app.use(express.json());
 app.use('/api',userRoutesAPPOINTMENT)
-app.use('/api',userRoutesCLIENT)
+app.use('/api',userRoutesPATIENT)
 app.use('/api',userRoutesFAVS)
 app.use('/api',userRoutesFILE)
 app.use('/api',userRoutesFORMS)
 app.use('/api',userRoutesODONTOGRAM)
 app.use('/api',userRoutesOFFERS)
-app.use('/api',userRoutesPROFESSIONAL)
+app.use('/api',userRoutesMEDICAL)
 app.use('/api',userRoutesSPECIALTY)
 
 //routes

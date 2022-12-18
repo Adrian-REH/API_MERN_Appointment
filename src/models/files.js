@@ -14,10 +14,10 @@ const filesSchema= mongoose.Schema({
     odontogram:{
         type: String
     },
-    client:{
+    patient:{
         type: String
     },   
-    professional:{
+    medical:{
         type: String
     }
 },{

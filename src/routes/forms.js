@@ -27,28 +27,28 @@ router.get("/forms/:id", (req, res) => {
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET PROFESSIONAL
-router.get("/forms/professional/:professional", (req, res) => {
-  const{professional} =req.params;
+//GET MEIDCAL
+router.get("/forms/medical/:medical", (req, res) => {
+  const{medical} =req.params;
   formsSchema
-    .findOne({professional:professional})
+    .findOne({medical:medical})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
-//GET CLIENT
-router.get("/forms/client/:client", (req, res) => {
-  const{client} =req.params;
+//GET PATIENT
+router.get("/forms/patient/:patient", (req, res) => {
+  const{patient} =req.params;
   formsSchema
-    .findOne({client:client})
+    .findOne({patient:patient})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 //UPDATE ID
 router.put("/forms/:id", (req, res) => {
   const{id} =req.params;
-  const{data,professional,client}=req.body;
+  const{data,medical,patient}=req.body;
   formsSchema
-    .updateOne({_id:id},{$set:{data,professional,client}})
+    .updateOne({_id:id},{$set:{data,medical,patient}})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

@@ -1,37 +1,37 @@
 odontogram//CREATE UNIQUE
 ###
-POST http://localhost:9000/api/odontogram HTTP/1.1
+POST  https://ibiocdappointment.azurewebsites.net/api/odontogram HTTP/1.1
 content-Type: application/json
 
 {
     "data":"asd",
-    "client":"svv",
-    "professional":"ccvdfs"
+    "patient":"svv",
+    "medical":"ccvdfs"
 }
 
 //ALL GET
 ###
-GET http://localhost:9000/api/odontogram HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/odontogram HTTP/1.1
 
 //UNIQUE GET
 ###
-GET http://localhost:9000/api/odontogram/639e6b1ac26ea5675c1ae284 HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/odontogram/639e6b1ac26ea5675c1ae284 HTTP/1.1
 
 ###
-GET http://localhost:9000/api/odontogram/professional/ccvdfs HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/odontogram/medical/ccvdfs HTTP/1.1
 
 ###
-GET http://localhost:9000/api/odontogram/client/svv HTTP/1.1
+GET  https://ibiocdappointment.azurewebsites.net/api/odontogram/patient/svv HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT  http://localhost:9000/api/odontogram/639e6b1ac26ea5675c1ae284 HTTP/1.1
+PUT   https://ibiocdappointment.azurewebsites.net/api/odontogram/639e6b1ac26ea5675c1ae284 HTTP/1.1
 content-Type: application/json
 
 {
     "data":"05032023",
-    "client":"svv",
-    "professional":"ccvdfs"
+    "patient":"svv",
+    "medical":"ccvdfs"
 }
 ###
-DELETE   http://localhost:9000/api/odontogram/639e649e4be659baa2a6006b HTTP/1.1
+DELETE    https://ibiocdappointment.azurewebsites.net/api/odontogram/639e649e4be659baa2a6006b HTTP/1.1

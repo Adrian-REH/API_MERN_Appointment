@@ -15,7 +15,7 @@ router.get("/appointment", (req, res) => {
   
   appointmentSchema
     .find()
-    .then((data) => res.json(data))
+    .then((body) => res.json(body))
     .catch((error) => res.json({ message: error }));
 });
 

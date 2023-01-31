@@ -28,18 +28,18 @@ router.get("/appointment/:id", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 //GET PROFESSIONAL
-router.get("/appointment/professional/:professional", (req, res) => {
-  const{professional} =req.params;
+router.get("/appointment/medical/:medical", (req, res) => {
+  const{medical} =req.params;
   appointmentSchema
-    .findOne({professional:professional})
+    .findOne({medical:medical})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 //GET CLIENT
-router.get("/appointment/client/:client", (req, res) => {
+router.get("/appointment/patient/:patient", (req, res) => {
   const{client} =req.params;
   appointmentSchema
-    .findOne({client:client})
+    .findOne({patient:patient})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

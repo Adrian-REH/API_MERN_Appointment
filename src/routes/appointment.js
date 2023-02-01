@@ -37,7 +37,7 @@ router.get("/appointment/medical/:medical", (req, res) => {
 });
 //GET CLIENT
 router.get("/appointment/patient/:patient", (req, res) => {
-  const{client} =req.params;
+  const{patient} =req.params;
   appointmentSchema
     .findOne({patient:patient})
     .then((data) => res.json(data))

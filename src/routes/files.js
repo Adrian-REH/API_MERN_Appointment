@@ -31,7 +31,7 @@ router.get("/files/:id", (req, res) => {
 router.get("/files/medical/:medical", (req, res) => {
   const{medical} =req.params;
   filesSchema
-    .findOne({medical:medical})
+    .find({medical:medical})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
@@ -39,7 +39,7 @@ router.get("/files/medical/:medical", (req, res) => {
 router.get("/files/patient/:patient", (req, res) => {
   const{patient} =req.params;
   filesSchema
-    .findOne({patient:patient})
+    .find({patient:patient})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

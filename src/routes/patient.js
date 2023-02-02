@@ -15,7 +15,7 @@ router.get("/patient", (req, res) => {
   
   clientSchema
     .find()
-    .then((data) => res.json(data))
+      .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 

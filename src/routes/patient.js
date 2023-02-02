@@ -3,15 +3,15 @@ const clientSchema= require("../models/patient");
 const router=express.Router();
 
 //CREATE
-router.post("/client", (req, res) => {
+router.post("/patient", (req, res) => {
     const client = clientSchema(req.body);
     client
       .save()
-      .then((data) => res.json(data))
+      .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL
-router.get("/client", (req, res) => {
+router.get("/patient", (req, res) => {
   
   clientSchema
     .find()
@@ -20,7 +20,7 @@ router.get("/client", (req, res) => {
 });
 
 //GET ID
-router.get("/client/:id", (req, res) => {
+router.get("/patient/:id", (req, res) => {
   const{id} =req.params;
   clientSchema
     .findById(id)
@@ -29,7 +29,7 @@ router.get("/client/:id", (req, res) => {
 });
 
 //UPDATE ID
-router.put("/client/:id", (req, res) => {
+router.put("/patient/:id", (req, res) => {
   const{id} =req.params;
   const{name_last,dni,phone,email,direction}=req.body;
   clientSchema
@@ -39,7 +39,7 @@ router.put("/client/:id", (req, res) => {
 });
 
 //DELETE ID
-router.delete("/client/:id", (req, res) => {
+router.delete("/patient/:id", (req, res) => {
   const{id} =req.params;
   clientSchema
     .deleteOne({_id:id})

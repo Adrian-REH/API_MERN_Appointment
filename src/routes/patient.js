@@ -4,8 +4,8 @@ const router=express.Router();
 
 //CREATE
 router.post("/patient", (req, res) => {
-    const client = clientSchema(req.body);
-    client
+    const patient = clientSchema(req.body);
+    patient
       .save()
       .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));
@@ -24,7 +24,7 @@ router.get("/patient/:id", (req, res) => {
   const{id} =req.params;
   clientSchema
     .findById(id)
-    .then((data) => res.json(data))
+      .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 

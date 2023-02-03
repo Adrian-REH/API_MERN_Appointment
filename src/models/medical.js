@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 
-const medicalSchema= mongoose.Schema({
+const profesionSchema= mongoose.Schema({
     name_last:{
         type: String,
         required: true
@@ -34,4 +34,4 @@ const medicalSchema= mongoose.Schema({
     versionKey: false
 });
 
-module.exports = mongoose.model('Medical',medicalSchema);
+module.exports = mongoose.model('Professional',profesionSchema);

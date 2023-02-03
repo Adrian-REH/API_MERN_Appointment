@@ -19,6 +19,7 @@ router.get("/odontogram", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
+
 //GET ID
 router.get("/odontogram/:id", (req, res) => {
   const{id} =req.params;

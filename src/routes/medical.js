@@ -1,5 +1,5 @@
 const express = require('express');
-const profesionSchema= require("../models/medical");
+const medicalSchema= require("../models/medical");
 const router=express.Router();
 
 

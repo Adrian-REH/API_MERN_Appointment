@@ -14,6 +14,9 @@ const filesSchema= mongoose.Schema({
     odontogram:{
         type: String
     },
+    form:{
+        type: String
+    },
     patient:{
         type: String
     },   

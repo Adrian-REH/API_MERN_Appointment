@@ -5,7 +5,7 @@ const favsSchema= mongoose.Schema({
     medical:{
         type: String
     },
-    pattient:{
+    patient:{
         type: String
     }
 },{

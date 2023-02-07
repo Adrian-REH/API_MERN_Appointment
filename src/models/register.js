@@ -5,7 +5,7 @@ const registerSchema= mongoose.Schema({
     medical:{
         type: String
     },
-    pattient:{
+    patient:{
         type: String
     }
 },{

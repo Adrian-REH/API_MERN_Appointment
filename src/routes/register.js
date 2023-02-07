@@ -2,7 +2,6 @@ const express = require('express');
 const registerSchema= require("../models/register");
 const router=express.Router();
 
-
 //CREATE
 router.post("/register", (req, res) => {
     const register = registerSchema(req.body);

@@ -11,6 +11,8 @@ const userRoutesOFFERS=require('./src/routes/offers')
 const userRoutesMEDICAL=require('./src/routes/medical')
 const userRoutesSPECIALTY=require('./src/routes/specialty')
 const userRoutesUPLOAD=require('./src/routes/upload')
+const userRoutesREGISTER=require('./src/routes/register')
+
 //Settings
 const app= express();
 const port=process.env.PORT ||9000;
@@ -27,6 +29,7 @@ app.use('/api',userRoutesOFFERS)
 app.use('/api',userRoutesMEDICAL)
 app.use('/api',userRoutesSPECIALTY)
 app.use('/api',userRoutesUPLOAD)
+app.use('/api',userRoutesREGISTER)
 
 //routes
 app.get('/',(req,res)=>{

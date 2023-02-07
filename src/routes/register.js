@@ -5,8 +5,8 @@ const router=express.Router();
 
 //CREATE
 router.post("/register", (req, res) => {
-    const favs = registerSchema(req.body);
-    favs
+    const register = registerSchema(req.body);
+    register
       .save()
       .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));

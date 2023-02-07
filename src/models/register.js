@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 
-const favsSchema= mongoose.Schema({
+const registerSchema= mongoose.Schema({
     medical:{
         type: String
     },
@@ -13,4 +13,4 @@ const favsSchema= mongoose.Schema({
     versionKey: false
 });
 
-module.exports = mongoose.model('Favs',favsSchema);
+module.exports = mongoose.model('Register', registerSchema);

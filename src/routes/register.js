@@ -1,11 +1,12 @@
 const express = require('express');
 const registerSchema= require("../models/register");
+const favsSchema= require("../models/favs");
 const router=express.Router();
 
 //CREATE
 router.post("/register", (req, res) => {
-    const register = registerSchema(req.body);
-    register
+    const favs = favsSchema(req.body);
+    favs
       .save()
       .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));

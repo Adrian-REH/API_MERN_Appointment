@@ -19,6 +19,14 @@ router.get("/patient", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
+//GET GMAIL
+router.get("/patient/:email", (req, res) => {
+  const{email} =req.params;
+  clientSchema
+    .findById(email)
+    .then((data) => res.json({"result":data,"info":""}))
+    .catch((error) => res.json({ message: error }));
+});
 //GET ID
 router.get("/patient/:id", (req, res) => {
   const{id} =req.params;

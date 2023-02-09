@@ -23,8 +23,8 @@ router.get("/medical", (req, res) => {
 router.get("/medical/email/:email", (req, res) => {
   const{email} =req.params;
   profesionSchema
-    .find({email:email})
-    .then((data) => res.json({"result":data,"info":""}))
+    .findOne({email:email})
+    .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 //GET ID

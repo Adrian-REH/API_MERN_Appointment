@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser=require("body-parser")
+
 require("dotenv").config();
 const userRoutesAPPOINTMENT=require('./src/routes/appointment')
 const userRoutesPATIENT=require('./src/routes/patient')
@@ -16,7 +18,7 @@ const userRoutesREGISTER=require('./src/routes/register')
 //Settings
 const app= express();
 const port=process.env.PORT ||9000;
-
+app.use(bodyParser.urlencoded({extended:false}))
 // moddleware
 app.use(express.json());
 app.use('/api',userRoutesAPPOINTMENT)

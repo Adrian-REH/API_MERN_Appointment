@@ -20,7 +20,7 @@ router.get("/medical", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 //GET GMAIL
-router.get("/medical/:email", (req, res) => {
+router.get("/medical/email/:email", (req, res) => {
   const{email} =req.params;
   profesionSchema
     .find({email:email})

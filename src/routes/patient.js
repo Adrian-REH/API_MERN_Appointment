@@ -7,7 +7,7 @@ router.post("/patient", (req, res) => {
     const patient = clientSchema(req.body);
     patient
       .save()
-      .then((data) => res.json({"result":data,"info":""}))
+      .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL

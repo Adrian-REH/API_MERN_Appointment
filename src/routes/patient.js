@@ -20,7 +20,7 @@ router.get("/patient", (req, res) => {
 });
 
 //GET GMAIL
-router.get("/patient/:email", (req, res) => {
+router.get("/patient/email/:email", (req, res) => {
   const{email} =req.params;
   clientSchema
     .find({email:email})

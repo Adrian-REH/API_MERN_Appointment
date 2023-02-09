@@ -23,7 +23,7 @@ router.get("/patient", (req, res) => {
 router.get("/patient/email/:email", (req, res) => {
   const{email} =req.params;
   clientSchema
-    .find({email:email})
+    .findOne({email:email})
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

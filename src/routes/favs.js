@@ -31,7 +31,7 @@ router.get("/favs/:id", (req, res) => {
 router.get("/favs/medical/:medical", (req, res) => {
   const{medical} =req.params;
   favsSchema
-    .findOne({medical:medical})
+    .find({medical:medical})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
@@ -39,7 +39,7 @@ router.get("/favs/medical/:medical", (req, res) => {
 router.get("/favs/patient/:patient", (req, res) => {
   const{patient} =req.params;
   favsSchema
-    .findOne({patient:patient})
+    .find({patient:patient})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

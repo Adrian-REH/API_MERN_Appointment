@@ -32,7 +32,7 @@ router.get("/register/:id", (req, res) => {
 router.get("/register/medical/:medical", (req, res) => {
   const{medical} =req.params;
   registerSchema
-    .findOne({medical:medical})
+    .find({medical:medical})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
@@ -40,7 +40,7 @@ router.get("/register/medical/:medical", (req, res) => {
 router.get("/register/patient/:patient", (req, res) => {
   const{patient} =req.params;
   registerSchema
-    .findOne({patient:patient})
+    .find({patient:patient})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

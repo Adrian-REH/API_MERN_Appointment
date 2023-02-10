@@ -14,6 +14,7 @@ const userRoutesMEDICAL=require('./src/routes/medical')
 const userRoutesSPECIALTY=require('./src/routes/specialty')
 const userRoutesUPLOAD=require('./src/routes/upload')
 const userRoutesREGISTER=require('./src/routes/register')
+const userRoutesLABS=require('./src/routes/laboratory')
 
 //Settings
 const app= express();
@@ -32,6 +33,7 @@ app.use('/api',userRoutesMEDICAL)
 app.use('/api',userRoutesSPECIALTY)
 app.use('/api',userRoutesUPLOAD)
 app.use('/api',userRoutesREGISTER)
+app.use('/api',userRoutesLABS)
 
 //routes
 app.get('/',(req,res)=>{

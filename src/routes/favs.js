@@ -1,7 +1,6 @@
 const express = require('express');
 const favsSchema= require("../models/favs");
 const router=express.Router();
-
 //CREATE
 router.post("/favs", (req, res) => {
     const favs = favsSchema(req.body);

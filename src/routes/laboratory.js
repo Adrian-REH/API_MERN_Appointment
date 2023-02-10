@@ -39,7 +39,7 @@ router.put("/laboratory/:id", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-//DELETE ID
+//DELETE IDs
 router.delete("/laboratory/:id", (req, res) => {
   const{id} =req.params;
   labSchema

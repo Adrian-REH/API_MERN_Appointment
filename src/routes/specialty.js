@@ -7,7 +7,7 @@ router.post("/specialty", (req, res) => {
     const specialty = specialtySchema(req.body);
     specialty
       .save()
-      .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL
@@ -15,7 +15,7 @@ router.get("/specialty", (req, res) => {
   
   specialtySchema
     .find()
-    .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 
@@ -24,7 +24,7 @@ router.get("/specialty/:id", (req, res) => {
   const{id} =req.params;
   specialtySchema
     .findById(id)
-    .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 
@@ -34,7 +34,7 @@ router.put("/specialty/:id", (req, res) => {
   const{title,comment,medical,offer,price}=req.body;
   specialtySchema
     .updateOne({_id:id},{$set:{title,comment,medical,offer,price}})
-    .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 
@@ -43,7 +43,7 @@ router.delete("/specialty/:id", (req, res) => {
   const{id} =req.params;
   specialtySchema
     .deleteOne({_id:id})
-    .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 

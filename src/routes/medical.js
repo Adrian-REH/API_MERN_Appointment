@@ -8,7 +8,7 @@ router.post("/medical", (req, res) => {
     const medical = profesionSchema(req.body);
     medical
       .save()
-    .then((data) => res.json({"result":data,"info":""}))
+    .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL
@@ -24,7 +24,7 @@ router.get("/medical/email/:email", (req, res) => {
   const{email} =req.params;
   profesionSchema
     .findOne({email:email})
-    .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 //GET ID

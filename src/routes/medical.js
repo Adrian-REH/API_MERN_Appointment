@@ -8,7 +8,7 @@ router.post("/medical", (req, res) => {
     const medical = profesionSchema(req.body);
     medical
       .save()
-      .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL

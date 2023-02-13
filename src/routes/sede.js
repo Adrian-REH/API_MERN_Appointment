@@ -23,7 +23,7 @@ router.get("/sede", (req, res) => {
 router.get("/sede/:id", (req, res) => {
   const{id} =req.params;
   sedeSchema
-    .find(id)
+    .findById(id)
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

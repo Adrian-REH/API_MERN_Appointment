@@ -2,9 +2,6 @@
 const mongoose = require("mongoose");
 
 const labSchema= mongoose.Schema({
-    specialty:{
-        type: String
-    },
     name_lab:{
         type: String
     },

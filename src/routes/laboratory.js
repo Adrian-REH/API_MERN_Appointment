@@ -32,9 +32,9 @@ router.get("/laboratory/:id", (req, res) => {
 //UPDATE ID
 router.put("/laboratory/:id", (req, res) => {
   const{id} =req.params;
-  const{specialty,name_lab,phone,sedes,telefono,correo,acreditado}=req.body;
+  const{name_lab,phone,sedes,telefono,correo,acreditado}=req.body;
   labSchema
-    .updateOne({_id:id},{$set:{specialty,name_lab,phone,sedes,telefono,correo,acreditado}})
+    .updateOne({_id:id},{$set:{name_lab,phone,sedes,telefono,correo,acreditado}})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

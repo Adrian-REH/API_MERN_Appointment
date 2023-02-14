@@ -1,56 +1,46 @@
 const express = require('express');
-const clientSchema= require("../models/patient");
+const dateSchema= require("../models/date");
 const router=express.Router();
 
 //CREATE
-router.post("/patient", (req, res) => {
-    const client = clientSchema(req.body);
-    client
+router.post("/date", (req, res) => {
+    const date = dateSchema(req.body);
+    date
       .save()
       .then((data) => res.json({"result":data,"info":""}))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL
-router.get("/patient", (req, res) => {
+router.get("/date", (req, res) => {
   
-  clientSchema
+  dateSchema
     .find()
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 
-
-//GET GMAIL
-router.get("/patient/email/:email", (req, res) => {
-  const{email} =req.params;
-  clientSchema
-    .findOne({email:email})
-    .then((data) => res.json({"result":data,"info":""}))
-    .catch((error) => res.json({ message: error }));
-});
 //GET ID
-router.get("/patient/:id", (req, res) => {
+router.get("/date/:id", (req, res) => {
   const{id} =req.params;
-  clientSchema
-    .findById(id)
+  dateSchema
+    .find(id)
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
-
 //UPDATE ID
-router.put("/patient/:id", (req, res) => {
+router.put("/date/:id", (req, res) => {
   const{id} =req.params;
-  const{name_last,dni,phone,email,direction,img}=req.body;
-  clientSchema
-    .updateOne({_id:id},{$set:{name_last,dni,phone,email,direction,img}})
+  const{medical,lunes,martes,miercoles,jueves,viernes,sabado,domingo}=req.body;
+  dateSchema
+    .updateOne({_id:id},{$set:{medical,lunes,martes,miercoles,jueves,viernes,sabado,domingo}})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
 
 //DELETE ID
-router.delete("/patient/:id", (req, res) => {
+router.delete("/date/:id", (req, res) => {
   const{id} =req.params;
-  clientSchema
+  dateSchema
     .deleteOne({_id:id})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));

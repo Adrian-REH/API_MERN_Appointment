@@ -18,6 +18,9 @@ const clientSchema= mongoose.Schema({
     },
     direction:{
         type: String
+    },
+    img:{
+        type: String
     }
 },{
     timestamps:true,

@@ -28,6 +28,9 @@ const profesionSchema= mongoose.Schema({
         type: String,
         unique: true,
         trim: true
+    },
+    img:{
+        type: String
     }
 },{
     timestamps:true,

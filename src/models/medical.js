@@ -31,6 +31,9 @@ const profesionSchema= mongoose.Schema({
     },
     img:{
         type: String
+    },
+    hour_on:{
+        type: String
     }
 },{
     timestamps:true,

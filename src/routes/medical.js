@@ -39,9 +39,9 @@ router.get("/medical/:id", (req, res) => {
 //UPDATE ID
 router.put("/medical/:id", (req, res) => {
   const{id} =req.params;
-  const{name_last,dni,phone,email,direction,tuition,profession,img}=req.body;
+  const{name_last,dni,phone,email,direction,tuition,profession,img,hour_on}=req.body;
   profesionSchema
-    .updateOne({_id:id},{$set:{name_last,dni,phone,email,direction,tuition,profession,img}})
+    .updateOne({_id:id},{$set:{name_last,dni,phone,email,direction,tuition,profession,img,hour_on}})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

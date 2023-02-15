@@ -36,7 +36,7 @@ router.get("/medical/:id", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-//UPDATE ID
+//UPDATES ID 
 router.put("/medical/:id", (req, res) => {
   const{id} =req.params;
   const{name_last,dni,phone,email,direction,tuition,profession,img,hour_on}=req.body;

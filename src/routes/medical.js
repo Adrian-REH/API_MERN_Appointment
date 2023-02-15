@@ -19,12 +19,11 @@ router.get("/medical", (req, res) => {
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });
-
 //GET GMAIL
 router.get("/medical/email/:email", (req, res) => {
   const{email} =req.params;
   profesionSchema
-    .findOne({email:email})
+    .find({email:email})
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

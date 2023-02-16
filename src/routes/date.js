@@ -23,7 +23,7 @@ router.get("/date", (req, res) => {
 router.get("/date/:id", (req, res) => {
   const{id} =req.params;
   dateSchema
-    .find(id)
+    .findById(id)
     .then((data) => res.json({"result":data,"info":""}))
     .catch((error) => res.json({ message: error }));
 });

@@ -33,7 +33,7 @@ router.put("/date/:id", (req, res) => {
   const{medical,lunes,martes,miercoles,jueves,viernes,sabado,domingo}=req.body;
   dateSchema
     .updateOne({_id:id},{$set:{medical,lunes,martes,miercoles,jueves,viernes,sabado,domingo}})
-    .then((data) => res.json({"result":data,"info":""}))
+    .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
@@ -42,7 +42,7 @@ router.delete("/date/:id", (req, res) => {
   const{id} =req.params;
   dateSchema
     .deleteOne({_id:id})
-    .then((data) => res.json({"result":data,"info":""}))
+    .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 

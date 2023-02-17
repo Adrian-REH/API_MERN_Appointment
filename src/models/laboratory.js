@@ -16,6 +16,9 @@ const labSchema= mongoose.Schema({
     },
     acreditado:{
         type: String
+    },
+    hour_on:{
+        type: String
     }
 },{
     timestamps:true,

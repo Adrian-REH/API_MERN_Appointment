@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser=require("body-parser")
+const path=require('path');
 
 require("dotenv").config();
 const userRoutesAPPOINTMENT=require('./src/routes/appointment')
@@ -38,6 +39,7 @@ app.use('/api',userRoutesREGISTER)
 app.use('/api',userRoutesLABS)
 app.use('/api',userRoutesSEDE)
 app.use('/api',userRoutesDATE)
+app.use(express.static(path.join(__dirname,'uploads')))
 
 //routes
 app.get('/',(req,res)=>{

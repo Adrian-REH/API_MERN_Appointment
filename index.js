@@ -39,7 +39,7 @@ app.use('/api',userRoutesREGISTER)
 app.use('/api',userRoutesLABS)
 app.use('/api',userRoutesSEDE)
 app.use('/api',userRoutesDATE)
-app.use(express.static(path.join(__dirname,'uploads')))
+app.use(express.static(path.join(__dirname,'uploads ')))
 
 //routes
 app.get('/',(req,res)=>{

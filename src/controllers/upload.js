@@ -13,15 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ 
     storage: storage,
-    fileFilter:(req,file,cb)=>{
-        const filetypes=/jpeg|jpg|pdf|gif|png/;
-        const mimetype=filetypes.test(file.mimetype);
-        const extname = filetypes.test(path.extname(file.originalname));
-        if(mimetype && extname){
-            return cb(null,true);
-        }
-        cb("Error: Archivo debe ser una pdf o Imagen valida")
-    } })
+ })
 
 exports.upload = upload.single('myFile')
 

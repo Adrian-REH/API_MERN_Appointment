@@ -7,7 +7,7 @@ router.post("/appointment", (req, res) => {
     const appointment = appointmentSchema(req.body);
     appointment
       .save()
-      .then((data) => res.json(data))
+    .then((data) => res.json({"result":data,"message":""}))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL

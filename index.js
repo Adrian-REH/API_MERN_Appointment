@@ -18,6 +18,7 @@ const userRoutesREGISTER=require('./src/routes/register')
 const userRoutesLABS=require('./src/routes/laboratory')
 const userRoutesSEDE=require('./src/routes/sede')
 const userRoutesDATE=require('./src/routes/date')
+const userRoutesPP=require('./PoliticaPrivacida')
 
 //Settings
 const app= express();
@@ -39,11 +40,12 @@ app.use('/api',userRoutesREGISTER)
 app.use('/api',userRoutesLABS)
 app.use('/api',userRoutesSEDE)
 app.use('/api',userRoutesDATE)
+app.use('/api',userRoutesPP)
 app.use(express.static(path.join(__dirname,'uploads')))
 
 //routes
 app.get('/',(req,res)=>{
-    res.send('Welcom to my API');
+    res.send(userRoutesPP);
 });
 
 

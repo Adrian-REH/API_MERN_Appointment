@@ -2,8 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser=require("body-parser")
 const path=require('path');
-const http = require("http");
-const url = require("url");
 
 require("dotenv").config();
 const userRoutesAPPOINTMENT=require('./src/routes/appointment')
@@ -20,7 +18,6 @@ const userRoutesREGISTER=require('./src/routes/register')
 const userRoutesLABS=require('./src/routes/laboratory')
 const userRoutesSEDE=require('./src/routes/sede')
 const userRoutesDATE=require('./src/routes/date')
-const rf=require('./PoliticaPrivacida')
 
 //Settings
 const app= express();
@@ -47,14 +44,6 @@ app.use(express.static(path.join(__dirname,'uploads')))
 //routes
 app.get('/',(req,res)=>{
     res.send(userRoutesPP);
-});
-const server = http.createServer((req, res) => {
-    statusCode = 200;
-    contentType =  {'Content-Type': 'text/html'};
-    let t = rf.read_file("text.html");
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(t);
-    res.end();
 });
 
 //MongoDB Conection

@@ -41,6 +41,8 @@ app.use('/api',userRoutesSEDE)
 app.use('/api',userRoutesDATE)
 app.use(express.static(path.join(__dirname,'uploads')))
 
+
+app.use(express.static(path.join(__dirname,'uploads/Dientes/superior')))
 //routes
 app.get('/',(req,res)=>{
     res.send(userRoutesPP);

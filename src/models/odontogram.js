@@ -2,9 +2,19 @@
 const mongoose = require("mongoose");
 
 const odontogramSchema= mongoose.Schema({
-    data:{
-        type: String,
-    },
+    data:[
+        {
+            number: {
+                type: String,
+            },
+            imgTop: {
+                type: String,
+            },
+            imgBot: {
+                type: String,
+            },
+        }
+    ],
     medical:{
         type: String,
     },

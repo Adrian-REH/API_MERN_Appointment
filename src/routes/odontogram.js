@@ -7,7 +7,7 @@ router.post("/odontogram", (req, res) => {
     const odontogram = odontogramSchema(req.body);
     odontogram
       .save()
-    .then((data) => res.json({"result":data,"message":""}))
+    .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
   });
 //GET ALL

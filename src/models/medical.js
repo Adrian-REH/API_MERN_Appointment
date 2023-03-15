@@ -32,6 +32,9 @@ const profesionSchema= mongoose.Schema({
     img:{
         type: String
     },
+    token_not:{
+        type: String
+    },
     hour_on:{
         type: String
     }

@@ -40,7 +40,7 @@ router.get("/patient/:id", (req, res) => {
 //UPDATE ID
 router.put("/patient/:id", (req, res) => {
   const{id} =req.params;
-  const{name_last,dni,phone,email,direction,img,token_not}=req.body;
+  const{name_last,dni,phone,email,direction,img, token_not}=req.body;
   clientSchema
     .updateOne({_id:id},{$set:{name_last,dni,phone,email,direction,img,token_not}})
     .then((data) => res.json({"result":data,"info":""}))

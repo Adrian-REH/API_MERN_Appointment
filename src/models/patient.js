@@ -21,6 +21,9 @@ const clientSchema= mongoose.Schema({
     },
     img:{
         type: String
+    },
+    token_not:{
+        type: String
     }
 },{
     timestamps:true,

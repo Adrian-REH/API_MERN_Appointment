@@ -11,21 +11,21 @@ content-Type: application/json
 
 //ALL GET
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/forms HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/forms HTTP/1.1
 
 //UNIQUE GET
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/forms/medical/ccvdfs HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/forms/medical/ccvdfs HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/forms/patient/svv HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/forms/patient/svv HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT   https://ibiocdappointment.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1
 content-Type: application/json
 
 {
@@ -34,4 +34,4 @@ content-Type: application/json
     "medical":"nfgidfadfcdudvdasf"
 }
 ###
-DELETE   https://ibiocdappointment.azurewebsites.net/api/forms/639e6299c7634dfd7561b825 HTTP/1.1
+DELETE   https://appointmentibiocd.azurewebsites.net/api/forms/639e633ba6078c4a78ad4195 HTTP/1.1

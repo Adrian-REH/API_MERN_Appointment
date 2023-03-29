@@ -1,0 +1,45 @@
+//CREATE UNIQUE
+###
+POST  https://appointmentibiocd.azurewebsites.net/api/date HTTP/1.1
+content-Type: application/json
+
+{
+    "medical":"63e98c3b9159d413432d42ec",
+    "lunes":"08:30 de 18:30",
+    "martes":"08:30 de 18:30",
+    "miercoles":"08:30 de 18:30",
+    "jueves":"08:30 de 18:30",
+    "viernes":"08:30 de 18:30",
+    "sabado":"08:30 de 18:30",
+    "domingo":"08:30 de 18:30"
+
+}
+
+//ALL GET
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/date HTTP/1.1
+
+//GET UNIQUE 
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/date/63eef70958dfb08ef870b5b9 HTTP/1.1
+
+
+
+//UPDATE UNIQUE ID
+###
+PUT  https://appointmentibiocd.azurewebsites.net/api/date/63ebdd16e104a86a6f47acd6 HTTP/1.1
+content-Type: application/json
+
+{
+    "medical":"639e34145bb5f9cceeaa8a6a",
+    "lunes":"0830 de 1830",
+    "martes":"0830 de 1830",
+    "miercoles":"0830 de 1830",
+    "jueves":"0830 de 1830",
+    "viernes":"0830 de 1830",
+    "sabado":"0830 de 1830",
+    "domingo":"1030 de 1830"
+}
+
+###
+DELETE    https://appointmentibiocd.azurewebsites.net/api/date/63f56872b2b362681dd5ac58 HTTP/1.1

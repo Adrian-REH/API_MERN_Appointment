@@ -1,0 +1,37 @@
+//CREATE UNIQUE
+###
+POST  https://appointmentibiocd.azurewebsites.net/api/register HTTP/1.1
+content-Type: application/json
+
+{
+    "medical":"639e34145bb5sadceeaa8a6a",
+    "patient":"63e30863144420347e26d4f6"
+
+}
+
+//ALL GET
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/register HTTP/1.1
+
+//GET UNIQUE 
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/register/639e34145bb5f9cceeaa8a6a HTTP/1.1
+
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/register/medical/639e34145bb5f9cceeaa8a6a HTTP/1.1
+
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/register/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
+
+//UPDATE UNIQUE ID
+###
+PUT  https://appointmentibiocd.azurewebsites.net/api/register/63e2ea0f144420347e26d4d7 HTTP/1.1
+content-Type: application/json
+
+{
+    "medical":"639e34145bb5f9cceeaa8a6a",
+    "patient":"639e5b3678539b79cd8dfbe1"
+}
+
+###
+DELETE    https://appointmentibiocd.azurewebsites.net/api/register/63e30a00144420347e26d500 HTTP/1.1

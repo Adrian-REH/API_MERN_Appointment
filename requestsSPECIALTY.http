@@ -1,37 +1,37 @@
 //CREATE UNIQUE
 ###
-POST  https://ibiocdappointment.azurewebsites.net/api/specialty HTTP/1.1
+POST  https://appointmentibiocd.azurewebsites.net/api/specialty HTTP/1.1
 content-Type: application/json
 
 {
-    "title":"Blanqueo",
-    "comment":"La verdad nose que poner",
-    "medical":"639e5b3678539b79cd8dfbe1",
-    "offer":"tuktuyytyertgfd",
-    "price":"500"
+      "title": "Blanquemiento",
+      "comment": "Ver las ofertas al sacar el turno",
+      "medical": "639e34145bb5f9cceeaa8a6a",
+      "offer": "0.3",
+      "price": "700"
 }
 
 //ALL GET
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/specialty HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/specialty HTTP/1.1
 
 //GET UNIQUE 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/specialty/639e743b79231047a438af58 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/specialty/639e743b79231047a438af58 HTTP/1.1
 
 
 //UPDATE UNIQUE ID
 ###
-PUT   https://ibiocdappointment.azurewebsites.net/api/specialty/639e743b79231047a438af58 HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/specialty/63e64c06fa93a3b883b5e7ac HTTP/1.1
 content-Type: application/json
 
 {
-    "title":"Blanqueo",
-    "comment":"Ver las ofertas al sacar el turno",
-    "medical":"639e5b3678539b79cd8dfbe1",
-    "offer":"639e7564c0df17739ae36210",
-    "price":"500"
+      "title": "Blanquemiento",
+      "comment": "Ver las ofertas al sacar el turno",
+      "medical": "639e34145bb5f9cceeaa8a6a",
+      "offer": "0.3",
+      "price": "700",
 }
 
 ###
-DELETE    https://ibiocdappointment.azurewebsites.net/api/specialty/639e60de17cf92e9199e3f74 HTTP/1.1
+DELETE    https://appointmentibiocd.azurewebsites.net/api/specialty/63f57e96b2b362681dd5bab4 HTTP/1.1

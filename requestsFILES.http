@@ -1,6 +1,6 @@
 //CREATE UNIQUE
 ###
-POST  https://ibiocdappointment.azurewebsites.net/api/files HTTP/1.1
+POST  https://appointmentibiocd.azurewebsites.net/api/files HTTP/1.1
 content-Type: application/json
 
 {
@@ -8,36 +8,40 @@ content-Type: application/json
     "prescriptions":"https://",
     "stadies":"https://",
     "odontogram":"ggewrasdsad24fdfasd",
-    "patient":"ggewr234324fdfasd",
-    "medical":"nfgidfadfcdudvdasf"
+    "form":"639e633ba6078c4a78ad4195",
+    "patient":"639e5b3678539b79cd8dfbe1",
+    "medical":"639e34145bb5f9cceeaa8a6a"
 }
 
 //ALL GET
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/files HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/files HTTP/1.1
 
 //GET UNIQUE ID
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/files/639e5e8949faa98335149024 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/files/63fe3784bb9969df2bc76476 HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/files/medical/nfgidfadfcdudvdasf HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/files/medical/639e34145bb5f9cceeaa8a6a HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/files/patient/ggewr234324fdfasd HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/files/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT   https://ibiocdappointment.azurewebsites.net/api/files/639e5e8949faa98335149024 HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/files/63fe3784bb9969df2bc76476 HTTP/1.1
 content-Type: application/json
 
 {
-    "laboratory":"http://",
-    "prescriptions":"http://",
-    "stadies":"http://",
-    "odontogram":"ggewrasdsad24fdfasd",
-    "patient":"ggewr234324fdfasd",
-    "medical":"nfgidfadfcdudvdasf"
+      "laboratory": "",
+      "prescriptions": "",
+      "stadies": "",
+      "odontogram": "",
+      "form": "",
+      "patient": "63fc8c07c1cf7e926f9e65ed",
+      "medical": "63fc8c07c1cf7e926f9e65eb",
+      "createdAt": "2023-02-28T17:19:00.424Z",
+      "updatedAt": "2023-03-09T18:38:25.971Z"
 }
 ###
-DELETE    https://ibiocdappointment.azurewebsites.net/api/files/639e4fea47baef21c5416c9d HTTP/1.1
+DELETE    https://appointmentibiocd.azurewebsites.net/api/files/640a23609d190c8b2752395f HTTP/1.1

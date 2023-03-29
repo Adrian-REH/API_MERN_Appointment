@@ -1,35 +1,41 @@
 ###
-POST  https://ibiocdappointment.azurewebsites.net/api/patient HTTP/1.1
+POST  https://appointmentibiocd.azurewebsites.net/api/patient HTTP/1.1
 content-Type: application/json
 
 {
     
-    "name_last":"Elias Herrera",
-    "dni":"99412342",
-    "phone":"3813910940",
-    "email":"eliasherrera.r.e@gmail.com",
-    "direction":"Pj d 207"
+    "name_last":"xdxdxcb Garcia",
+    "dni":"18032170",
+    "phone":"1191119340",
+    "email":"maximialiano.g@gmail.com",
+    "direction":"dooc",
+    "img":"//sadas",
+    "token_not":"//sadas"
 }
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/patient HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/patient HTTP/1.1
 
 
 ###
-GET https://ibiocdappointment.azurewebsites.net/api/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
+GET https://appointmentibiocd.azurewebsites.net/api/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
 
+###
+GET https://appointmentibiocd.azurewebsites.net/api/patient/email/maximiliano.g@gmail.com HTTP/1.1
 
 
 ###
-PUT   https://ibiocdappointment.azurewebsites.net/api/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/patient/63fc8c07c1cf7e926f9e65ed HTTP/1.1
 content-Type: application/json
 
 {
-    "name_last":"Guemez Dante",
-    "dni":"1133548822",
-    "phone":"554221843",
-    "email":"guemezdante@gmail.com",
-    "direction":"Donde estr 203"
+    "name_last": "Adrian Herrera",
+    "dni": "42121008",
+    "phone": "11525434828",
+    "email": "adrianherrera.r.e@gmail.com",
+    "direction": "::",
+    "img": "",
+    "token_not":""
 }
 ###
-DELETE   https://ibiocdappointment.azurewebsites.net/api/patient/639e46e1d3742d4db3355eb0 HTTP/1.1
+DELETE   https://appointmentibiocd.azurewebsites.net/api/patient/64123fb5b61dc908f81ad80a HTTP/1.1

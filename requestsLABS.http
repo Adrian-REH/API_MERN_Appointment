@@ -1,0 +1,40 @@
+//CREATE UNIQUE
+###
+POST  https://appointmentibiocd.azurewebsites.net/api/laboratory HTTP/1.1
+content-Type: application/json
+
+{
+    "name_lab":"IBIOCD LAB",
+    "telefono":"3125512312",
+    "correo":"ibiocd.lab@gmail.com",
+    "acreditado":"true"
+
+}
+
+//ALL GET
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/laboratory HTTP/1.1
+
+//GET UNIQUE 
+###
+GET  https://appointmentibiocd.azurewebsites.net/api/laboratory/63e98c3b9159d413432d42ec HTTP/1.1
+
+
+
+//UPDATE UNIQUE ID
+###
+PUT  https://appointmentibiocd.azurewebsites.net/api/laboratory/63e98c3b9159d413432d42ec HTTP/1.1
+content-Type: application/json
+
+{
+
+      "name_lab": "IBIOCD LAB",
+      "sedes": "63e30863144420347e26d4f6",
+      "telefono": "3125512312",
+      "correo": "ibiocd.lab@gmail.com",
+      "acreditado": "true",
+        "hour_on": "63eef70958dfb08ef870b5b9"
+}
+
+###
+DELETE    https://appointmentibiocd.azurewebsites.net/api/laboratory/63e98c3b9159d413432d42ec HTTP/1.1

@@ -1,6 +1,6 @@
 //CREATE UNIQUE
 ###
-POST  https://ibiocdappointment.azurewebsites.net/api/appointment HTTP/1.1
+POST  https://appointmentibiocd.azurewebsites.net/api/appointment HTTP/1.1
 content-Type: application/json
 
 {
@@ -11,42 +11,44 @@ content-Type: application/json
     "patient":"639e5b3678539b79cd8dfbe1",
     "medical":"639e34145bb5f9cceeaa8a6a",
     "profession":"sdsadsa",
-    "files":"639e5e8949faa98335149024",
+    "files":"63e054f10306d008ed92058d",
     "price":"500*0.2"
 }
 
 //ALL GET
 ###
-GET https://ibiocdappointment.azurewebsites.net/api/appointment HTTP/1.1
+GET https://appointmentibiocd.azurewebsites.net/api/appointment HTTP/1.1
 
 //UNIQUE GET
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/appointment/639e743479231047a438af56 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/appointment/639eb08bb1237edb17332b01 HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/appointment/medical/639e743479231047a438af56 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/appointment/medical/639e34145bb5f9cceeaa8a6a HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/appointment/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/appointment/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
 
 ###
-GET  https://ibiocdappointment.azurewebsites.net/api/appointment/files/639e5e8949faa98335149024 HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/appointment/files/63ef0a922a8d7fc1f582dd20 HTTP/1.1
 
 //UPDATE UNIQUE ID
 ###
-PUT   https://ibiocdappointment.azurewebsites.net/api/appointment/639e743479231047a438af56 HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/appointment/63f7d0beaf342784e81a7f41 HTTP/1.1
 content-Type: application/json
 
 {
-    "fecha":"02032023",
-    "hora":"1454",
-    "coment":"Blanqueo y arreglo",
-    "specialty":"639e743b79231047a438af58",
-    "patient":"639e5b3678539b79cd8dfbe1",
-    "medical":"639e34145bb5f9cceeaa8a6a",
-    "profession":"asdsdc",
-    "files":"639e5e8949faa98335149024",
-    "price":"500*0.2"
+      "fecha": "23/2/2023",
+      "hora": "10:00",
+      "coment": "",
+      "specialty": "Title 5",
+      "patient": "639e5b3678539b79cd8dfbe1",
+      "medical": "639e34145bb5f9cceeaa8a6a",
+      "profession": "Odontologo",
+      "files": "",
+      "price": "",
+      "createdAt": "2023-02-23T20:46:54.883Z",
+      "updatedAt": "2023-02-23T20:46:54.883Z"
 }
 ###
-DELETE    https://ibiocdappointment.azurewebsites.net/api/appointment/639e77b184881c462ad6a0b6 HTTP/1.1
+DELETE    https://appointmentibiocd.azurewebsites.net/api/appointment/640a237a9d190c8b27523961 HTTP/1.1

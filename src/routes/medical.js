@@ -6,10 +6,21 @@ const router=express.Router();
 //CREATE
 router.post("/medical", (req, res) => {
     const medical = profesionSchema(req.body);
-    medical
-      .save()
-      .then((data) => res.json({"result":data,"info":""}))
-      .catch((error) => res.json({ message: error }));
+    medical.find({email:req.body.email}), (err, userWithSameEmail) => {
+      if (err) {
+        res.status(400).json({
+          message: 'Error getting email try gain',
+        });
+      } else if (userWithSameEmail) {
+        res.status(400).json({ message: 'This email is taken' });
+      } else {
+        medical
+        .save()
+        .then((data) => res.json({"result":data,"info":""}))
+        .catch((error) => res.json({ message: error }));
+  
+      }
+    }
   });
 //GET ALL
 router.get("/medical", (req, res) => {

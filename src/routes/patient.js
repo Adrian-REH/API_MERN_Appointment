@@ -4,11 +4,21 @@ const router=express.Router();
 
 //CREATE
 router.post("/patient", (req, res) => {
-    const client = clientSchema(req.body);
-    client
-      .save()
-      .then((data) => res.json({"result":data,"info":""}))
-      .catch((error) => res.json({ message: error }));
+  const client = clientSchema(req.body);
+    client.find({email:req.body.email}), (err, userWithSameEmail) => {
+      if (err) {
+        res.status(400).json({
+          message: 'Error getting email try gain',
+        });
+      } else if (userWithSameEmail) {
+        res.status(400).json({ message: 'This email is taken' });
+      } else {
+        client
+        .save()
+        .then((data) => res.json({"result":data,"info":""}))
+        .catch((error) => res.json({ message: error }));
+  
+      }}
   });
 //GET ALL
 router.get("/patient", (req, res) => {

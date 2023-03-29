@@ -7,7 +7,7 @@ content-Type: application/json
     "name_last":"xdxdxcb Garcia",
     "dni":"18032170",
     "phone":"1191119340",
-    "email":"maximialiano.g@gmail.com",
+    "email":"adrianherrera.r.e@gmail.com",
     "direction":"dooc",
     "img":"//sadas",
     "token_not":"//sadas"
@@ -38,4 +38,4 @@ content-Type: application/json
     "token_not":""
 }
 ###
-DELETE   https://appointmentibiocd.azurewebsites.net/api/patient/6424717d38cc153e56cd717c HTTP/1.1
+DELETE   https://appointmentibiocd.azurewebsites.net/api/patient/64247b0bf2350bad06619725 HTTP/1.1

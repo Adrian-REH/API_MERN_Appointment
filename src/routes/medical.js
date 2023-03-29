@@ -5,8 +5,7 @@ const router=express.Router();
 
 //CREATE
 router.post("/medical", (req, res) => {
-    const medical = profesionSchema(req.body);
-    medical.find({email:req.body.email}), (err, userWithSameEmail) => {
+    profesionSchema.find({email:req.body.email}), (err, userWithSameEmail) => {
       if (err) {
         res.status(400).json({
           message: 'Error getting email try gain',
@@ -14,6 +13,7 @@ router.post("/medical", (req, res) => {
       } else if (userWithSameEmail) {
         res.status(400).json({ message: 'This email is taken' });
       } else {
+        const medical = profesionSchema(req.body);
         medical
         .save()
         .then((data) => res.json({"result":data,"info":""}))

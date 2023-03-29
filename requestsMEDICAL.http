@@ -8,7 +8,7 @@ content-Type: application/json
     "dni":"42322783",
     "phone":"3643910230",
     "profession":"Cirugia",
-    "email":"fernanda.G@gmail.com",
+    "email":"fernandddddda.G@gmail.com",
     "direction":"asdas",
     "tuition":"15970",
     "img":"//sadas"
@@ -26,25 +26,21 @@ GET  https://appointmentibiocd.azurewebsites.net/api/medical/email/adrianherrera
 
 
 ###
-PUT   https://appointmentibiocd.azurewebsites.net/api/medical/63fc8c07c1cf7e926f9e65eb HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/medical/6421e10151ebb9d53c61871b HTTP/1.1
 content-Type: application/json
 
 {
       "_id": "63e3061d144420347e26d4ec",
-      "name_last": "Adrian Herrera",
-      "dni": "42121008",
-      "phone": "1125434828",
-      "email": "adrianherrera.r.e@gmail.com",
-      "direction": "-9.1352031:38.774326:",
-      "tuition": "7785:t",
-      "profession": "Odontologo",
+      "name_last": "Israel ",
+      "dni": "34391650",
+      "phone": "",
+      "email": "orlandohr358@gmail.com",
+      "direction": "::",
+      "tuition": "34398r:f",
+      "profession": "",
       "img": "",
-          "token_not":""
-,
-      "hour_on": "63fc8d29c1cf7e926f9e6628",
-      "createdAt": "2023-02-27T10:55:03.766Z",
-      "updatedAt": "2023-02-27T11:01:08.469Z"
-
+      "hour_on": "",
+      "token_not": ""
 }
 ###
-DELETE    https://appointmentibiocd.azurewebsites.net/api/medical/63fc8a90c1cf7e926f9e65e3 HTTP/1.1
+DELETE    https://appointmentibiocd.azurewebsites.net/api/medical/6424684338cc153e56cd7135 HTTP/1.1

@@ -14,7 +14,9 @@ const profesionSchema= mongoose.Schema({
         type: String
     },
     email:{
-        type: String
+        type: String,
+        unique: true,
+        trim: true
     },
     direction:{
         type: String

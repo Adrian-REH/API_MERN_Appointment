@@ -42,7 +42,7 @@ app.use('/api',userRoutesDATE)
 app.use(express.static(path.join(__dirname,'uploads')))
 //routes
 app.get('/',(req,res)=>{
-    res.send(userRoutesPP);
+    res.send("Hola! Bienvenido a Appointment Medical");
 });
 
 //MongoDB Conection

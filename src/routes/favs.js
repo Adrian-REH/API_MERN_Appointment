@@ -15,7 +15,9 @@ const router=express.Router();
       .save()
       .then(data => res.json({"result":data,"info":"Se creo el fav"}))
       .catch((error) => res.json({ message: error}));
-    }}).catch(error => res.json({ message: error}));
+    }
+    res.json({"result":data,"info":"Se creo el fav"})
+  }).catch(error => res.json({ message: error}));
     });
 //GET ALL
 router.get("/favs", (req, res) => {

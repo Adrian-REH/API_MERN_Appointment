@@ -2,13 +2,21 @@ const express = require('express');
 const favsSchema= require("../models/favs");
 const router=express.Router();
 //CREATE
-router.post("/favs", (req, res) => {
-    const favs = favsSchema(req.body);
-    favs
+
+
+  router.post("/favs", (req, res) => {
+    const favs=favsSchema(req.body);
+    const{medical,patient}=req.params;
+  
+    favsSchema
+    .find({medical:medical,patient:patient})
+    .then(data => {if(data.length==0){
+      favs
       .save()
-      .then((data) => res.json({"result":data,"info":""}))
-      .catch((error) => res.json({ message: error }));
-  });
+      .then(data => res.json({"result":data,"info":"Se creo el fav"}))
+      .catch((error) => res.json({ message: error}));
+    }}).catch(error => res.json({ message: error}));
+    });
 //GET ALL
 router.get("/favs", (req, res) => {
   

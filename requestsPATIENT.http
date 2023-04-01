@@ -18,24 +18,26 @@ GET  https://appointmentibiocd.azurewebsites.net/api/patient HTTP/1.1
 
 
 ###
-GET https://appointmentibiocd.azurewebsites.net/api/patient/639e5b3678539b79cd8dfbe1 HTTP/1.1
+GET https://appointmentibiocd.azurewebsites.net/api/patient/63fc8c07c1cf7e926f9e65ed HTTP/1.1
 
 ###
 GET https://appointmentibiocd.azurewebsites.net/api/patient/email/maximiliano.g@gmail.com HTTP/1.1
 
 
 ###
-PUT   https://appointmentibiocd.azurewebsites.net/api/patient/6421e39b51ebb9d53c618738 HTTP/1.1
+PUT   https://appointmentibiocd.azurewebsites.net/api/patient/6421e8e551ebb9d53c618755 HTTP/1.1
 content-Type: application/json
 
 {
-      "name_last": "Yessica Juarez",
-      "dni": "37770436",
+      "name_last": "Bruno Cabrera ",
+      "dni": "94454169",
       "phone": "",
-      "email": "soledadyessicajuarez@gmail.com",
+      "email": "od.brunocabrera@gmail.com",
       "direction": "::",
       "img": "",
-    "token_not":""
+      "createdAt": "2023-03-27T19:05:09.352Z",
+      "updatedAt": "2023-03-29T17:02:20.407Z",
+      "token_not": ""
 }
 ###
-DELETE   https://appointmentibiocd.azurewebsites.net/api/patient/64247b0bf2350bad06619725 HTTP/1.1
+DELETE   https://appointmentibiocd.azurewebsites.net/api/patient/6424c27157f3d8302d667de8 HTTP/1.1

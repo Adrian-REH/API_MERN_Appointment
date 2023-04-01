@@ -19,7 +19,7 @@ GET  https://appointmentibiocd.azurewebsites.net/api/medical HTTP/1.1
 
 
 ###
-GET  https://appointmentibiocd.azurewebsites.net/api/medical/63e98c3b9159d413432d42ec HTTP/1.1
+GET  https://appointmentibiocd.azurewebsites.net/api/medical/63fc8c07c1cf7e926f9e65ed HTTP/1.1
 
 ###
 GET  https://appointmentibiocd.azurewebsites.net/api/medical/email/adrianherrera.r.e@gmail.com HTTP/1.1
@@ -36,11 +36,11 @@ content-Type: application/json
       "phone": "",
       "email": "orlandohr358@gmail.com",
       "direction": "::",
-      "tuition": "34398r:f",
+      "tuition": "34398:f",
       "profession": "",
       "img": "",
       "hour_on": "",
       "token_not": ""
 }
 ###
-DELETE    https://appointmentibiocd.azurewebsites.net/api/medical/6424684338cc153e56cd7135 HTTP/1.1
+DELETE    https://appointmentibiocd.azurewebsites.net/api/medical/6424a7c957f3d8302d667d2e HTTP/1.1

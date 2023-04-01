@@ -4,8 +4,8 @@ POST  https://appointmentibiocd.azurewebsites.net/api/favs HTTP/1.1
 content-Type: application/json
 
 {
-    "medical":"63e3061d144420347e26aadd4ec",
-    "patient":"639e5b3678539b79cd8dfbe1"
+    "medical":"63fc8c07c1cf7e926f9e65eb",
+    "patient":"63fc8c07c1cf7e926f9e65ed"
 
 }
 
@@ -34,4 +34,4 @@ content-Type: application/json
 }
 
 ###
-DELETE    https://appointmentibiocd.azurewebsites.net/api/favs/63e2e1444151c716ea4b0d2c HTTP/1.1
+DELETE    https://appointmentibiocd.azurewebsites.net/api/favs/642840f332c18e98b273e3c3 HTTP/1.1

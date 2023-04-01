@@ -9,7 +9,7 @@ const router=express.Router();
     const{medical,patient}=req.params;
   
     favsSchema
-    .find({"medical":medical,"patient":patient})
+    .find({medical:medical,patient:patient})
     .then(data => {if(data.length==0){
       favs
       .save()
